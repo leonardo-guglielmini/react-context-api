@@ -4,7 +4,7 @@ import './App.css'
 /*IMPORT UTILITIES*/
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import axios from 'axios'
-import { useState, useEffect } from 'react'
+import { useState} from 'react'
 import GlobalContext from './context/GlobalContext'
 
 /*IMPORT BASE LAYOUT*/
@@ -14,7 +14,7 @@ import Default from './layouts/Default'
 /*IMPORT PAGES*/
 import Homepage from './pages/Homepage/Homepage'
 import About from './pages/About/About'
-import Posts from './pages/Posts/Posts'
+import Posts from './pages/Posts/PostsPage'
 import NotFound from './pages/NotFound/NotFound'
 import Post from "./pages/Posts/Post/Post"
 
@@ -34,14 +34,9 @@ function App() {
         .catch(err => {
             console.error(err)
         })
-}
-
-useEffect(() => {
-    fetchPosts()
-},[])
-
+  }
   return (
-    <GlobalContext.Provider value={{posts, fetchPosts}}>
+    <GlobalContext.Provider value={{posts, setPosts, fetchPosts}}>
       <BrowserRouter>
         <Routes >
           <Route element={<Default/>}>

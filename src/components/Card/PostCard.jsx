@@ -5,7 +5,7 @@ import { faPen } from '@fortawesome/free-solid-svg-icons'
 
 import placeholderImg from "../../assets/placeholder.webp"
 import style from "./Card.module.css"
-import { API_BASE_URI } from '../../pages/Posts/Posts'
+import { API_BASE_URI } from '../../pages/Posts/PostsPage'
 
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
