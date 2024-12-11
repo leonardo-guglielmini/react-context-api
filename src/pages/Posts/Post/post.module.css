@@ -1,0 +1,42 @@
+.mainContent{
+    margin: 2.5rem 0;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: fit-content;
+}
+
+.cardImg, .cardBody{
+    width: 75%;
+    text-align: center;
+    img{
+        width: 100%;
+        display: block;
+        border-bottom-left-radius: 5%;
+        border-bottom-right-radius: 5%;
+        margin-bottom: 1rem;
+    }
+    ul{
+        margin-top: 1rem;
+    }
+}
+
+.loading{
+    text-align: center;
+}
+
+.navigate{
+    width: 10%;
+}
+
+.faArrowRight:hover, .faArrowLeft:hover{
+    font-size: 3rem;
+    transition: all 0.5s;
+}
